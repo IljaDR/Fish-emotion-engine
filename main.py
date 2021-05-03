@@ -1,16 +1,19 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import csv
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    with open('emotion-lexicon.csv') as csv_lexicon:
+        reader = csv.reader(csv_lexicon)
+        lexicon = {rows[0]: rows[1] for rows in reader}
+    while True:
+        sentence = input()
+        sentiment = "neutral"
+        sentence = sentence.split(' ')
+        for word in sentence:
+            if word in lexicon:
+                sentiment = lexicon[word]
+        print(sentiment)
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
