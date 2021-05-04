@@ -1,2 +1,2 @@
 # Fish-emotion-engine
- Low tech live sentiment analysis
+ Low tech live emotion analysis

@@ -9,6 +9,11 @@ def main():
         reader = csv.reader(csv_lexicon)
         lexicon = {rows[0]: rows[1] for rows in reader}
 
+    # load negation list into a dictionary
+    with open('negation-list.csv') as csv_negations:
+        reader = csv.reader(csv_negations)
+        negations = {rows[0] for rows in reader}
+
     while True:
         # get user input
         sentence = input()
@@ -19,13 +24,25 @@ def main():
         # split user input into a list of words
         sentence = sentence.split(' ')
 
-        # for each word
-        for word in sentence:
-            # check if word exists in lexicon
-            if word in lexicon:
-                # if so, set emotion to whatever emotion corresponds to the word and exit the loop
-                emotion = lexicon[word]
-                break
+        i = 0
+        while i < len(sentence):
+            # check if current word is in negation
+            if sentence[i] in negations:
+                # check to prevent IndexError
+                if i+1 == len(sentence):
+                    break
+                # check if the negation is one or two words, then move the iterator 2 or 3 places respectively
+                if '%s %s' % (sentence[i], sentence[i+1]) in negations:
+                    i += 3
+                else:
+                    i += 2
+            # check to prevent IndexError
+            if i < len(sentence):
+                if sentence[i] in lexicon:
+                    # if so, set emotion to whatever emotion corresponds to the word and exit the loop
+                    emotion = lexicon[sentence[i]]
+                    break
+            i += 1
         print(emotion)
 
 
