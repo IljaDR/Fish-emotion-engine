@@ -53,11 +53,7 @@ def main():
                         emotion = lexicon[sentence[i]]
                         break
                 i += 1
-
-            m = {"emotion": emotion}
-
-            data = json.dumps(m)
-            conn.sendall(bytes(data,encoding="utf-8"))
+            conn.sendall(bytes(emotion,encoding="utf-8"))
 
 
 if __name__ == '__main__':
