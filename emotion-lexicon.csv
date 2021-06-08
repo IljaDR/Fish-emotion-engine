@@ -33,7 +33,6 @@ aesthetics,joy
 affection,joy
 affluence,joy
 afraid,fear
-aga,fear
 aggravated,anger
 aggravation,anger
 aghast,fear
@@ -184,7 +183,6 @@ bile,anger
 biopsy,fear
 birthday,joy
 birthplace,anger
-black,sadness
 blame,anger
 blasphemous,anger
 blasphemy,anger
@@ -292,7 +290,6 @@ choir,joy
 choral,joy
 chronic,sadness
 chuckle,joy
-church,joy
 civilized,joy
 claimant,anger
 clamor,anger
@@ -470,7 +467,6 @@ dictator,fear
 dictatorial,anger
 difficult,fear
 difficulties,sadness
-dike,fear
 dilapidated,sadness
 diminish,sadness
 dinosaur,fear
@@ -635,9 +631,7 @@ fanfare,joy
 fang,fear
 fangs,fear
 fasting,sadness
-fat,sadness
 fatigued,sadness
-fatty,sadness
 fault,sadness
 favorable,joy
 favorite,joy
@@ -884,7 +878,6 @@ illuminate,joy
 illumination,joy
 immaculate,joy
 immaturity,anger
-immigrant,fear
 imminent,fear
 immorality,anger
 impeach,fear
@@ -1017,7 +1010,6 @@ laxative,fear
 leave,sadness
 leeches,fear
 leisure,joy
-lesbian,sadness
 lethargy,sadness
 liberation,joy
 liberty,joy
@@ -1121,7 +1113,6 @@ morbid,sadness
 moribund,sadness
 mortgage,fear
 mortgagor,fear
-mosque,anger
 mosquito,anger
 motherhood,joy
 mourn,sadness
@@ -1141,7 +1132,6 @@ nauseous,sadness
 necessity,sadness
 negation,anger
 negative,sadness
-negro,sadness
 nervous,fear
 nervousness,fear
 nettle,anger
@@ -1299,7 +1289,6 @@ promise,joy
 prosper,joy
 prosperous,joy
 prostitution,sadness
-protestant,fear
 proud,joy
 providing,joy
 provocation,anger
@@ -1602,7 +1591,6 @@ succeeding,joy
 success,joy
 successful,joy
 sucker,anger
-sultan,fear
 sun,joy
 sunny,joy
 sunshine,joy
@@ -1816,7 +1804,6 @@ woeful,sadness
 woefully,sadness
 wonderful,joy
 wonderfully,joy
-wop,anger
 words,anger
 worn,sadness
 worried,sadness
@@ -1831,3 +1818,7 @@ young,joy
 zeal,joy
 zealous,joy
 zest,joy
+lonely,sadness
+alone,sadness
+griefed,sadness
+better,joy
