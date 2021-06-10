@@ -157,7 +157,7 @@ def recognize_worker(conn, lexicon, negations):
 
             home = str(Path.home())
             path = os.path.join(home, 'fish\\emotions.csv')
-            with open(path, 'a+', encoding='UTF8') as f:
+            with open(path, 'a+', encoding='UTF8', newline='') as f:
                 # create the csv writer
                 writer = csv.writer(f)
 
