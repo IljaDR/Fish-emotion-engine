@@ -112,14 +112,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-LSTM/model.h5
+LSTM_model/model.h5
 BERT_model/pytorch_model.bin
 BERT_model/config.json
 BERT_model/special_tokens_map.json
 BERT_model/tokenizer_config.json
 BERT_model/vocab.txt
-LSTM/encoder.pickle
-LSTM/tokenizer.pickle
+LSTM_model/encoder.pickle
+LSTM_model/tokenizer.pickle
 nlpp/__init__.py
 nlpp/dataset.py
 nlpp/utils.py

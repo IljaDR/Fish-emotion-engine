@@ -102,13 +102,13 @@ BERT_model = BertForSequenceClassification.from_pretrained(BERT_model_path)
 
 print("Finished initializing BERT")
 
-print("Initializing LSTM")
-LSTM_tokenizer_path = Path('LSTM/tokenizer.pickle').resolve()
-LSTM_encoder_path = Path('LSTM/encoder.pickle').resolve()
+print("Initializing LSTM_model")
+LSTM_tokenizer_path = Path('LSTM_model/tokenizer.pickle').resolve()
+LSTM_encoder_path = Path('LSTM_model/encoder.pickle').resolve()
 tokenizer, encoder = LSTM_get_tokenizer_and_encoder(LSTM_tokenizer_path, LSTM_encoder_path)
 
-LSTM_model = load_model('LSTM/model.h5', compile=False)
-print("Finished initializing LSTM\nWaiting for client...")
+LSTM_model = load_model('LSTM_model/model.h5', compile=False)
+print("Finished initializing LSTM_model\nWaiting for client...")
 
 HOST, PORT = "localhost", 10000
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -173,8 +173,8 @@ def recognize_worker(conn, lexicon, negations):
                 sequence = pad_sequences(list_tokenized, maxlen=100)
                 predictions = LSTM_model.predict(sequence)
                 pred = predictions.argmax(axis=1)
-                print("LSTM's result: %s" % encoder.classes_[pred[0]])
-                writer.writerow([datetime.now(), 'LSTM', encoder.classes_[pred[0]]])
+                print("LSTM_model's result: %s" % encoder.classes_[pred[0]])
+                writer.writerow([datetime.now(), 'LSTM_model', encoder.classes_[pred[0]]])
 
         except sr.UnknownValueError:
             print("Google Speech Recognition could not understand audio")
